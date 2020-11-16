@@ -1,15 +1,10 @@
 // fonction random pour générer soit jaune , soit vert
 
-function changeBodyBg(){
-    let bobox = Math.floor(Math.random() * 2) + 1  
-    switch(bobox)
-    {
-        case 1:
-            document.body.style.background = 'yellow';
-        break;
+let button = document.getElementById("color");
 
-        case 2:
-            document.body.style.background = 'green';
-        break;
-    }
-}
+button.addEventListener("click", function() 
+{
+    const curColour = document.body.style.backgroundColor;
+
+    document.body.style.backgroundColor = curColour === 'red' ? 'blue' : 'red';
+});
